@@ -4,5 +4,44 @@ services:
     build: requirements/mariadb
     volumes:
       - mdb_vol:/var/lib/mysql
+    networks:
+      dockern:
+        ipv4_address: 10.0.0.2
+    restart: on-failure
+  nginx:
+    build: requirements/nginx
+    ports:
+      - "443:443"
+    volumes:
+      - wordpress_vol:/usr/share/wordpress
+    depends_on:
+      -  "mariadb"
+    networks:
+      dockern:
+        ipv4_address: 10.0.0.3
+    restart: on-failure
+  wordpress:
+    build: requirements/wordpress
+    volumes:
+      - wordpress_vol:/usr/share/wordpress
+    networks:
+      dockern:
+        ipv4_address: 10.0.0.4
+    restart: on-failure
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_USER2=${MYSQL_USER2}
+      - MYSQL_PASSWORD2=${MYSQL_PASSWORD2}
 volumes:
   mdb_vol: {}
+  wordpress_vol: {}
+networks:
+  dockern: 
+    ipam:
+      config:
+        - subnet: 10.0.0.0/29
+          gateway: 10.0.0.1
+
+  
