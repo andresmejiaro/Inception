@@ -1,7 +1,15 @@
 version: '3'
 services:
   mariadb: 
-    build: requirements/mariadb
+    build: 
+      context: requirements/mariadb
+      args:
+          - MYSQL_USER=${MYSQL_USER}
+          - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+          - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+          - MYSQL_ADMIN_USER=${MYSQL_ADMIN_USER}
+          - MYSQL_ADMIN_PASSWORD=${MYSQL_ADMIN_PASSWORD}
+    image: mariadb
     volumes:
       - mdb_vol:/var/lib/mysql
     networks:
@@ -13,6 +21,7 @@ services:
     restart: on-failure
   nginx:
     build: requirements/nginx
+    image: nginx
     ports:
       - "443:443"
     volumes:
@@ -24,7 +33,9 @@ services:
         ipv4_address: 10.0.0.3
     restart: on-failure
   wordpress:
-    build: requirements/wordpress
+    build: 
+      context: requirements/wordpress
+    image: wordpress
     volumes:
       - wordpress_vol:/usr/share/wordpress
     networks:
@@ -37,11 +48,24 @@ services:
       - DB_HOST=${DB_HOST}
       - HOST_NAME=${HOST_NAME}
       - HTTP_HOST=${HOST_NAME}
+      - WP_USER=${WP_USER}
+      - WP_PASSWORD=${WP_PASSWORD}
+      - WP_EMAIL=${WP_EMAIL}
     depends_on:
       - mariadb
 volumes:
-  mdb_vol: {}
-  wordpress_vol: {}
+  mdb_vol: 
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/amejia/data_folder/mdb_vol'
+  wordpress_vol: 
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/amejia/data_folder/wordpress_vol'
 networks:
   dockern: 
     ipam:

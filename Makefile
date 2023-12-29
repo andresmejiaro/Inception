@@ -21,4 +21,10 @@ down:
 
 re: down build up
 
-.PHONY: build up down
+oblivion:
+	-docker ps -qa | xargs -r docker stop 
+	-docker ps -qa | xargs -r docker rm 
+	-docker images -qa | xargs -r docker rmi -f 
+	-docker volume ls -q | xargs -r docker volume rm 
+
+.PHONY: build up down oblivion

@@ -5,10 +5,10 @@ if ! $(wp core is-installed --allow-root); then
   echo "in"
     wp core install  \
         --url=$HOST_NAME \
-        --title="YOUR_WORDPRESS_SITE_TITLE" \
-        --admin_user="YOUR_ADMIN_USERNAME" \
-        --admin_password="YOUR_ADMIN_PASSWORD" \
-        --admin_email="amejia@42.fr" \
+        --title="A Blog about You" \
+        --admin_user="$WP_USER" \
+        --admin_password="$WP_PASSWORD" \
+        --admin_email="$WP_EMAIL" \
         --skip-email \
         --allow-root
 fi

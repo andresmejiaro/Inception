@@ -9,10 +9,27 @@ while ! /usr/bin/mysqladmin ping -h 'localhost' --silent; do
     sleep 1
 done
 
-DB_EXISTS=$(mysql -u root -e "SHOW DATABASES LIKE 'wordpress';" | grep "wordpress" > /dev/null; echo "$?")
+
+echo "$MYSQL_ROOT_PASSWORD, $MYSQL_ADMIN_USER, $MYSQL_ADMIN_PASSWORD, $MYSQL_USER, $MYSQL_PASSWORD"
+
+ROOT_INSECURE=$(mysql -u root -p$MYSQL_ROOT_PASSWORD -e ";" 2>&1| grep 'Access denied for user' > /dev/null; echo "$?")
+
+if [ $ROOT_INSECURE -ne 0 ]; then
+    echo "Setting Root and admin"
+    mysql -u root -e "
+        DELETE FROM mysql.user WHERE User='';
+        DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1');
+        DROP DATABASE IF EXISTS test;
+        CREATE USER IF NOT EXISTS '$MYSQL_ADMIN_USER'@'%' IDENTIFIED BY '$MYSQL_ADMIN_PASSWORD';
+        GRANT SELECT,INSERT,UPDATE,DELETE,DROP,ALTER ON *.* TO '$MYSQL_ADMIN_USER'@'%' WITH GRANT OPTION;
+        ALTER USER 'root'@'localhost' IDENTIFIED BY '$MYSQL_ROOT_PASSWORD';
+        FLUSH PRIVILEGES;"
+fi
+
+DB_EXISTS=$(mysql -u root -p$MYSQL_ROOT_PASSWORD -e "SHOW DATABASES LIKE 'wordpress';" | grep "wordpress" > /dev/null; echo "$?")
 if [ $DB_EXISTS -ne 0 ]; then
     echo "Creating database..."
-    mysql -u root -e "CREATE DATABASE wordpress;
+    mysql -u root -p$MYSQL_ROOT_PASSWORD -e "CREATE DATABASE wordpress;
     CREATE USER IF NOT EXISTS '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';
     GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER
     ON wordpress.*
