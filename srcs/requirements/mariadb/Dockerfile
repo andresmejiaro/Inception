@@ -12,8 +12,12 @@
 
 FROM debian:buster
 
-RUN apt-get update && apt-get install -y mariadb-server
-
+RUN apt-get update && apt-get install -y mariadb-server mariadb-client
+COPY 50-server.conf /etc/mysql/mariadb.conf.d/50-server.cnf
+COPY setupdb.sh /usr/src/app/setupdb.sh
+RUN chmod +x /usr/src/app/setupdb.sh
+RUN /usr/src/app/setupdb.sh
 EXPOSE 3306
 
-CMD ["mysqld_safe"]
+
+ENTRYPOINT [ "mysqld_safe" ] 
