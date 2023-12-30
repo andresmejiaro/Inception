@@ -19,12 +19,22 @@ up:
 down:
 	docker-compose -f srcs/docker-compose.yml down
 
-re: down build up
+re: oblivion build up
 
-oblivion:
+oblivion: full_stop image_del volume_del network_del
+
+full_stop:
 	-docker ps -qa | xargs -r docker stop 
 	-docker ps -qa | xargs -r docker rm 
+
+image_del:
 	-docker images -qa | xargs -r docker rmi -f 
+	
+
+volume_del:
 	-docker volume ls -q | xargs -r docker volume rm 
 
-.PHONY: build up down oblivion
+network_del:
+	-docker network ls -q | xargs -r docker network rm
+
+.PHONY: build up down oblivion image_del volume_del network_del full_stop

@@ -1,6 +1,80 @@
+docker ps -qa | xargs -r docker stop 
+e719cef31129
+f954a10181ca
+1e70044f9652
+docker ps -qa | xargs -r docker rm 
+e719cef31129
+f954a10181ca
+1e70044f9652
+docker images -qa | xargs -r docker rmi -f 
+Untagged: wordpress:latest
+Deleted: sha256:3b7d879f7462e99d5e30b6d7fe0f0789f329d74ba1f24d4f8c5fbb6b65b9a744
+Deleted: sha256:80003c05702928d7ad9d731a69355796592f285d0c43d022ea82424fc43e5a38
+Deleted: sha256:092e83ca6cf4e0275e3aade7d3537a50044dc9b34cbff29878d6c458d55e3dbb
+Deleted: sha256:f3b5b6e2ef46030badeddfac768bfee394204a60e8253191aaebc10bc4eefb81
+Deleted: sha256:50ad6fb2ddb9fcc73533c7baceaa34c5f2f09a480367d7eb9fdbe60eca4f671a
+Deleted: sha256:e0f79e0a94218f13ae465247c13ddd001281adbb1177a11fc7c72dd9a08a65ad
+Deleted: sha256:f04841b4157bc9c663d3fa1cd7fca28c3e1229719e0ff2f024bde3387e6df6d2
+Deleted: sha256:5c58004abe33b26addd491e8e9410fc9b952f40d5debe37b3b53317a564e9f0a
+Deleted: sha256:952f9206a041d4dafea6e0b5cc5cc43afede9fef176139bad685373ee0e395b5
+Deleted: sha256:43a54276fd05670471af0526480c288ac29729102c975e21a6bfc8a9376d0c51
+Deleted: sha256:cb83d860f15ed019a36a3a8d784e441c576251ee2e9669eb2e09e16edb773e07
+Deleted: sha256:81adc3f02a754aa719703340ee98992118f0956f9548f7d580007f612ed19be7
+Deleted: sha256:7f19ecc7b8aecc1187aad9432622937842ca0781469cfa564ce18f047c8935ee
+Deleted: sha256:c69c5eea9fd7e511f7cf2bea821b4c4903808d9be8af745812f1440ae1b7c2b5
+Deleted: sha256:bd2b5451c5ab7bb3105fac30ce881f49eeb701cd0bfdbd2a1f64e51d7bec3a91
+Deleted: sha256:133403b2f6a6ec2982684a60ff42736b1843d8f0dbc92f0beb5c2950660037bb
+Untagged: nginx:latest
+Deleted: sha256:41171e6919c8702f56b9365cce10c6eb21f944260f9b3dafb11cb3793ec9e5a8
+Deleted: sha256:d6caa3d4c59d353c33a37da683a9993dfd9a33e2d4fa6f3c7006074fdffa6bc3
+Deleted: sha256:781640bc0f4a4db86a49647fcc342076567c14858ee21c199366e662dadb772a
+Deleted: sha256:494e5c4b9f84c62ce42f8c9d5b815fde426c0aeea183108f0f61efa9edb07223
+Deleted: sha256:453b620df99721f7760f6ca5919cd192d2e3b9d66cc45238318295a8fff776fb
+Deleted: sha256:bfa53366b557d48faa405b37c740584025cf5de5f438fc0c2b59578b409abee4
+Deleted: sha256:3fa6486a061d208a9b4866f5c4c8138fecfe15a6dbe10e461b9f122019c9b886
+Deleted: sha256:687a55d5027fd56caceb0d364ec49ff4817aa8af202b39b5de1168eb8862ac0a
+Deleted: sha256:a5d86fe5dcb46be1827a09b70056d452ec9e65934ac93c4bc2de8c4cee8994eb
+Deleted: sha256:6dfcc4e3172a3473c7105706be2b4b3150df2c41711646cf739f5d90975f7d4e
+Deleted: sha256:21f366a5fdaf293f629679c4551edd71257fa22e9d22d08b07a9a69e5ed97830
+Deleted: sha256:09573e6bef8aa85763f9fb7db7e35e04a16a33f78b873d1103f5ef906daa22a5
+Untagged: mariadb:latest
+Deleted: sha256:6d39ed71814730cd57acb90848e036e42b12a877be5eb16bd492c8efd2f683a0
+Deleted: sha256:0cfd2b59cdf7bca88f2578e0c163e583571c6bb2279f8d244c34726d122765cb
+Deleted: sha256:883e4ae74fa6f365896469e225ff5ef44f409b7664c51d24d1f1273f85dcf442
+Deleted: sha256:757689853cb4e1130da7aa0c729496bfb6cc3a971ef3498699fe642c25542bce
+Deleted: sha256:7b860ca632eb172385c6a24127b12c14ea4ffd350a23f8e44571ae70f6c22abb
+Deleted: sha256:68d64298db596761258c00d662cd5c999037fa3f37baf57f5f8d6a1bddf04045
+Deleted: sha256:0e1d049a422b7ced01aa6720b9d732c21c30bbe6fae7175938f5c806e657c6f8
+Deleted: sha256:b4116e123252d0b61fa45bd22e3e52310716611fa6eed3a1b13bb5821ab6ec66
+Deleted: sha256:66939d277e53e73a3d373f0b00460df677f33f2c35f3062bcec65854f02cf2ba
+Deleted: sha256:a46fb948023df12d1e7f2a8e19240ce9621a19b2a1eda2f3d847fd0d7bb85340
+Deleted: sha256:56a1a0d4ca6a26bbf0f7b3d156b4d14474897a7d01d818e4d869e6af5df7a57d
+Deleted: sha256:3460e56fb2d8075f53748dce0bd92a14b287328d94c45fda8c26d78a10574e0b
+Deleted: sha256:996e2562cceca00043098dc350cabbe3a9057830ebe363a523a08323e6e2f7d2
+Deleted: sha256:b2e2d9955c93153cef9f4fffb9e3a8d3fa4f49c14b49a9e2609892c81686e2a0
+Deleted: sha256:f8a2b4f93e117b2f9d559f9c1117b0ec14d83f426f0a0c7d53a18fcd7524042f
+Deleted: sha256:e8b4eb60bed74831e5af0b8651294b27952494c374b7c0347ca90d9f97f9bdc6
+Deleted: sha256:6334644964ed377436d9a43dd920efd7f316ce90d6c91bbaad0ec35ae70abc05
+Deleted: sha256:80d6ba299fe43226ba3c32a9611620cf82fad4169873fdc93fd747be3767a501
+Deleted: sha256:3b343e10af98adb32a7efbb04e5c59127a9ef904437c81f849f90099d1fbf623
+Deleted: sha256:691605bf31dac52e8dd0837ddf5a6d33dc6b1a0d66042e39c4be5690c02a4a06
+Deleted: sha256:304032f45b057a8f28e4eabeef8eaf2b41490bdd195e778d9c37adc14b54738c
+Deleted: sha256:50102f6407f72aca49aac4945031ef0adcc4e260135ed94da01ac950deae09d1
+Deleted: sha256:ccfea4c238d8e49871b14c9ddf2b160631640b53e7107635547b82260092df1f
+Deleted: sha256:9d3ff347a6902e67f527e8aed5da790ac624bee20a42ee4b5f843c0c5970c197
+Deleted: sha256:c85d8113918821154e02c878e37054bb21bc32f225ea92d14891c762c73f74d4
+Deleted: sha256:9a831e06f555c0e971e834e3ad60ebfc9ce1a4fef94791bd6194208c363e3ba3
+Deleted: sha256:6369984531edecd29fbf004534c2dbb78a87df89ed08d1aa0efa786954fed648
+Untagged: debian:buster
+Untagged: debian@sha256:cd3bbe339eeb538f4a1a6b04e290690658c119cd50b73677d29b80e3cda8f1dd
+Deleted: sha256:c95792f4821670a66dc2812d4efc0b3af63b97aea8270b0d63d3b5f99665ff9e
+Deleted: sha256:68d1fa46303abcba15a51f050283a5c6919c9f68df0e99accb912172945a5181
+docker volume ls -q | xargs -r docker volume rm 
+srcs_mariadb
+srcs_wordpress
 docker-compose -f srcs/docker-compose.yml build
-Sending build context to Docker daemon  10.24kB
-Step 1/18 : FROM debian:buster
+Sending build context to Docker daemon  11.26kB
+Step 1/23 : FROM debian:buster
 buster: Pulling from library/debian
 30b73a2ffaab: Pulling fs layer
 30b73a2ffaab: Verifying Checksum
@@ -9,15 +83,15 @@ buster: Pulling from library/debian
 Digest: sha256:cd3bbe339eeb538f4a1a6b04e290690658c119cd50b73677d29b80e3cda8f1dd
 Status: Downloaded newer image for debian:buster
  ---> c95792f48216
-Step 2/18 : RUN apt-get update && apt-get install -y mariadb-server mariadb-client
- ---> Running in dd0c9f67f18d
+Step 2/23 : RUN apt-get update && apt-get install -y mariadb-server mariadb-client
+ ---> Running in 1da43c7c98dd
 Get:1 http://deb.debian.org/debian buster InRelease [122 kB]
 Get:2 http://deb.debian.org/debian-security buster/updates InRelease [34.8 kB]
 Get:3 http://deb.debian.org/debian buster-updates InRelease [56.6 kB]
 Get:4 http://deb.debian.org/debian buster/main amd64 Packages [7909 kB]
 Get:5 http://deb.debian.org/debian-security buster/updates/main amd64 Packages [575 kB]
 Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [8788 B]
-Fetched 8706 kB in 2s (4707 kB/s)
+Fetched 8706 kB in 2s (3848 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -108,7 +182,7 @@ Get:49 http://deb.debian.org/debian buster/main amd64 libterm-readkey-perl amd64
 Get:50 http://deb.debian.org/debian-security buster/updates/main amd64 mariadb-client all 1:10.3.39-0+deb10u1 [32.3 kB]
 Get:51 http://deb.debian.org/debian-security buster/updates/main amd64 mariadb-server all 1:10.3.39-0+deb10u1 [32.4 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 32.2 MB in 4s (8842 kB/s)
+[0mFetched 32.2 MB in 5s (7113 kB/s)
 Selecting previously unselected package perl-modules-5.28.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6686 files and directories currently installed.)
 Preparing to unpack .../0-perl-modules-5.28_5.28.1-6+deb10u1_all.deb ...
@@ -332,89 +406,130 @@ Setting up libhtml-template-perl (2.97-1) ...
 Setting up mariadb-server (1:10.3.39-0+deb10u1) ...
 Setting up libcgi-fast-perl (1:2.13-1) ...
 Processing triggers for libc-bin (2.28-10+deb10u2) ...
-Removing intermediate container dd0c9f67f18d
- ---> 5851f8f69071
-Step 3/18 : COPY 50-server.conf /etc/mysql/mariadb.conf.d/50-server.cnf
- ---> a17a71aed7e2
-Step 4/18 : COPY setupdb.sh /usr/src/app/setupdb.sh
- ---> 7d4772c329eb
-Step 5/18 : RUN chmod +x /usr/src/app/setupdb.sh
- ---> Running in 3df9c6eb04a1
-Removing intermediate container 3df9c6eb04a1
- ---> 40bec60c7d69
-Step 6/18 : ARG MYSQL_USER
- ---> Running in 41e23d9d9f86
-Removing intermediate container 41e23d9d9f86
- ---> bb9262af86d4
-Step 7/18 : ENV MYSQL_USER=$MYSQL_USER
- ---> Running in 7cae20d10472
-Removing intermediate container 7cae20d10472
- ---> d35785fce37b
-Step 8/18 : ARG MYSQL_PASSWORD
- ---> Running in 82385d77100c
-Removing intermediate container 82385d77100c
- ---> 8bb0aec53a43
-Step 9/18 : ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
- ---> Running in 432fb7e2f609
-Removing intermediate container 432fb7e2f609
- ---> 52740b03444b
-Step 10/18 : ARG MYSQL_ADMIN_USER
- ---> Running in 0f20c56c8f47
-Removing intermediate container 0f20c56c8f47
- ---> 0b25918d4385
-Step 11/18 : ENV MYSQL_ADMIN_USER=$MYSQL_ADMIN_USER
- ---> Running in 33fb4a99a823
-Removing intermediate container 33fb4a99a823
- ---> d3035798410d
-Step 12/18 : ARG MYSQL_ADMIN_PASSWORD
- ---> Running in dff870deb893
-Removing intermediate container dff870deb893
- ---> 31e19e1f5e97
-Step 13/18 : ENV MYSQL_ADMIN_PASSWORD=$MYSQL_ADMIN_PASSWORD
- ---> Running in 0114e1c03558
-Removing intermediate container 0114e1c03558
- ---> 0dc90717f4a0
-Step 14/18 : ARG MYSQL_ROOT_PASSWORD
- ---> Running in b508a98b180b
-Removing intermediate container b508a98b180b
- ---> aa03e98001a9
-Step 15/18 : ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
- ---> Running in a8db80ff1e6f
-Removing intermediate container a8db80ff1e6f
- ---> 5d0f4ed54fd9
-Step 16/18 : RUN /usr/src/app/setupdb.sh
- ---> Running in 2589df788a5a
+Removing intermediate container 1da43c7c98dd
+ ---> 71d320ded909
+Step 3/23 : COPY 50-server.conf /etc/mysql/mariadb.conf.d/50-server.cnf
+ ---> 3ba7a392d6f7
+Step 4/23 : COPY setupdb.sh /usr/src/app/setupdb.sh
+ ---> 9cdf384c0fc5
+Step 5/23 : RUN chmod +x /usr/src/app/setupdb.sh
+ ---> Running in fb197b9984ab
+Removing intermediate container fb197b9984ab
+ ---> 6b8f1ebcb06e
+Step 6/23 : ARG MYSQL_USER
+ ---> Running in 295bd9d36be5
+Removing intermediate container 295bd9d36be5
+ ---> 0b2cab3394c5
+Step 7/23 : ENV MYSQL_USER=$MYSQL_USER
+ ---> Running in f82ebd2550d5
+Removing intermediate container f82ebd2550d5
+ ---> 22f70692f0e0
+Step 8/23 : ARG MYSQL_PASSWORD
+ ---> Running in cffffc9a3710
+Removing intermediate container cffffc9a3710
+ ---> cf97f942c970
+Step 9/23 : ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
+ ---> Running in e53258435444
+Removing intermediate container e53258435444
+ ---> 632145b3c249
+Step 10/23 : ARG MYSQL_ADMIN_USER
+ ---> Running in e0abfbf1018d
+Removing intermediate container e0abfbf1018d
+ ---> 5d2046611fc4
+Step 11/23 : ENV MYSQL_ADMIN_USER=$MYSQL_ADMIN_USER
+ ---> Running in c8341d1ad152
+Removing intermediate container c8341d1ad152
+ ---> 60134befd3e6
+Step 12/23 : ARG MYSQL_ADMIN_PASSWORD
+ ---> Running in 17043456e229
+Removing intermediate container 17043456e229
+ ---> 69e0b638a8b5
+Step 13/23 : ENV MYSQL_ADMIN_PASSWORD=$MYSQL_ADMIN_PASSWORD
+ ---> Running in f1d5a9481e3c
+Removing intermediate container f1d5a9481e3c
+ ---> 17d292c68377
+Step 14/23 : ARG MYSQL_ROOT_PASSWORD
+ ---> Running in f2b191c74807
+Removing intermediate container f2b191c74807
+ ---> 93ff252a4d92
+Step 15/23 : ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+ ---> Running in 1de7308fa61b
+Removing intermediate container 1de7308fa61b
+ ---> 034c4172514a
+Step 16/23 : RUN /usr/src/app/setupdb.sh
+ ---> Running in f22f9b10ef71
 waiting for database ...
-231229 23:34:24 mysqld_safe Logging to syslog.
-231229 23:34:24 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+231230 15:23:48 mysqld_safe Logging to syslog.
+231230 15:23:48 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
 mysqld is alive
 ZellixPhor, TheLegendOfZelda, MagicTheGathering, CallOfDuty, WorldOfWarcraft
 Setting Root and admin
+USER	HOST	PLUGIN
+root	localhost	*6A126CA6B3C005C329164E02C5747D703161057C
+0
+mysql -u root -e 
+        DELETE FROM mysql.user WHERE User='';
+        DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1');
+        DROP DATABASE IF EXISTS test;
+        ALTER USER 'root'@'localhost' IDENTIFIED BY 'ZellixPhor';
+        FLUSH PRIVILEGES;
+        SELECT USER,HOST,PASSWORD PLUGIN FROM mysql.user;
 Creating database...
-Removing intermediate container 2589df788a5a
- ---> 9e86e236d9ff
-Step 17/18 : EXPOSE 3306
- ---> Running in d732e7e4ddf9
-Removing intermediate container d732e7e4ddf9
- ---> 774bffa34ac8
-Step 18/18 : ENTRYPOINT [ "mysqld_safe" ]
- ---> Running in 0781dd67c28f
-Removing intermediate container 0781dd67c28f
- ---> fc2051bf641a
-Successfully built fc2051bf641a
+[91mERROR 1133 (28000) at line 7: Can't find any matching row in the user table
+[0m1
+mysql -u root -pZellixPhor -e CREATE DATABASE wordpress;
+    CREATE USER IF NOT EXISTS 'CallOfDuty'@'%' IDENTIFIED BY 'WorldOfWarcraft';
+    GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER
+    ON wordpress.*
+    TO 'CallOfDuty'@'%';
+    CREATE USER IF NOT EXISTS 'TheLegendOfZelda'@'%' IDENTIFIED BY 'MagicTheGathering';
+    GRANT SELECT,INSERT,UPDATE,DELETE,DROP,ALTER ON *.* TO 'TheLegendOfZelda'@'localhost' WITH GRANT OPTION;
+    FLUSH PRIVILEGES;
+    SELECT USER,HOST,PASSWORD PLUGIN FROM mysql.user;
+Removing intermediate container f22f9b10ef71
+ ---> 4308d7f33fdd
+Step 17/23 : ENV MYSQL_USER=
+ ---> Running in 30dc6854b3d9
+Removing intermediate container 30dc6854b3d9
+ ---> f27b5da3488a
+Step 18/23 : ENV MYSQL_PASSWORD=
+ ---> Running in ebf96cee4374
+Removing intermediate container ebf96cee4374
+ ---> fef6f7d6bd68
+Step 19/23 : ENV MYSQL_ADMIN_USER=
+ ---> Running in 97a0fceca5a9
+Removing intermediate container 97a0fceca5a9
+ ---> ab51bc65c5a0
+Step 20/23 : ENV MYSQL_ADMIN_PASSWORD=
+ ---> Running in 29b2dfeff611
+Removing intermediate container 29b2dfeff611
+ ---> 24e7e2b85320
+Step 21/23 : ENV MYSQL_ROOT_PASSWORD=
+ ---> Running in d6a82691ebbb
+Removing intermediate container d6a82691ebbb
+ ---> 951b78829ae8
+Step 22/23 : EXPOSE 3306
+ ---> Running in 7d8c1e50fc78
+Removing intermediate container 7d8c1e50fc78
+ ---> 90c8eb821ded
+Step 23/23 : ENTRYPOINT [ "mysqld_safe" ]
+ ---> Running in 964f66930f05
+Removing intermediate container 964f66930f05
+ ---> ada3f5fb7199
+Successfully built ada3f5fb7199
 Successfully tagged mariadb:latest
 Sending build context to Docker daemon  12.29kB
 Step 1/8 : FROM debian:buster
  ---> c95792f48216
 Step 2/8 : RUN apt-get update && apt-get install -y nginx curl && mkdir -p /etc/nginx/certs
- ---> Running in 26a14d724835
+ ---> Running in ad07e9e8ee71
 Get:1 http://deb.debian.org/debian buster InRelease [122 kB]
 Get:2 http://deb.debian.org/debian-security buster/updates InRelease [34.8 kB]
 Get:3 http://deb.debian.org/debian buster-updates InRelease [56.6 kB]
 Get:4 http://deb.debian.org/debian buster/main amd64 Packages [7909 kB]
 Get:5 http://deb.debian.org/debian-security buster/updates/main amd64 Packages [575 kB]
 Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [8788 B]
-Fetched 8706 kB in 2s (5597 kB/s)
+Fetched 8706 kB in 2s (5354 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -515,7 +630,7 @@ Get:58 http://deb.debian.org/debian-security buster/updates/main amd64 nginx-ful
 Get:59 http://deb.debian.org/debian-security buster/updates/main amd64 nginx all 1.14.2-2+deb10u5 [88.9 kB]
 Get:60 http://deb.debian.org/debian buster/main amd64 publicsuffix all 20220811.1734-0+deb10u1 [127 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 23.4 MB in 2s (9410 kB/s)
+[0mFetched 23.4 MB in 4s (5965 kB/s)
 Selecting previously unselected package libssl1.1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6686 files and directories currently installed.)
 Preparing to unpack .../00-libssl1.1_1.1.1n-0+deb10u6_amd64.deb ...
@@ -798,38 +913,38 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container 26a14d724835
- ---> bfda276e28c2
+Removing intermediate container ad07e9e8ee71
+ ---> e7771f3c2404
 Step 3/8 : COPY ngnix.conf /etc/nginx/conf.d/default.conf
- ---> 8c32bdeda44f
+ ---> b9c117588af7
 Step 4/8 : COPY sitesEnabled-Default.conf /etc/nginx/sites-enabled/default
- ---> b8eb11963b3f
+ ---> 776a89869bd6
 Step 5/8 : COPY localhost.crt /etc/nginx/certs/localhost.crt
- ---> 9c77191fdd1e
+ ---> d4e4b2d6ebfb
 Step 6/8 : COPY localhost.key /etc/nginx/certs/localhost.key
- ---> 97e6890985b8
+ ---> dbc92b845675
 Step 7/8 : EXPOSE 443
- ---> Running in 8444af4417cb
-Removing intermediate container 8444af4417cb
- ---> 52917ce372b5
+ ---> Running in 6db83fc4d474
+Removing intermediate container 6db83fc4d474
+ ---> 4f1798949293
 Step 8/8 : CMD ["nginx", "-g", "daemon off;"]
- ---> Running in 92dc0225ae82
-Removing intermediate container 92dc0225ae82
- ---> e9b780cab896
-Successfully built e9b780cab896
+ ---> Running in 0724a0f34227
+Removing intermediate container 0724a0f34227
+ ---> c552bf4382c0
+Successfully built c552bf4382c0
 Successfully tagged nginx:latest
-Sending build context to Docker daemon  99.84kB
+Sending build context to Docker daemon  100.4kB
 Step 1/10 : FROM debian:buster
  ---> c95792f48216
 Step 2/10 : RUN apt-get update && apt-get install -y wordpress php7.3-fpm php-curl php-gd php-intl     php-mbstring php-soap php-xml php-xmlrpc php-zip curl vim && mkdir -p /run/php/  &&     chown www-data:www-data /run/php/ && chmod 755 /run/php/
- ---> Running in 74f1b954c9e4
+ ---> Running in 29fe15d4e122
 Get:1 http://deb.debian.org/debian buster InRelease [122 kB]
 Get:2 http://deb.debian.org/debian-security buster/updates InRelease [34.8 kB]
 Get:3 http://deb.debian.org/debian buster-updates InRelease [56.6 kB]
 Get:4 http://deb.debian.org/debian buster/main amd64 Packages [7909 kB]
 Get:5 http://deb.debian.org/debian-security buster/updates/main amd64 Packages [575 kB]
 Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [8788 B]
-Fetched 8706 kB in 2s (4594 kB/s)
+Fetched 8706 kB in 2s (5486 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -1045,7 +1160,7 @@ Get:143 http://deb.debian.org/debian-security buster/updates/main amd64 wordpres
 Get:144 http://deb.debian.org/debian-security buster/updates/main amd64 wordpress-l10n all 5.0.20+dfsg1-0+deb10u1 [4386 kB]
 Get:145 http://deb.debian.org/debian-security buster/updates/main amd64 wordpress-theme-twentynineteen all 5.0.20+dfsg1-0+deb10u1 [308 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 66.2 MB in 8s (8231 kB/s)
+[0mFetched 66.2 MB in 9s (7164 kB/s)
 Selecting previously unselected package perl-modules-5.28.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6686 files and directories currently installed.)
 Preparing to unpack .../000-perl-modules-5.28_5.28.1-6+deb10u1_all.deb ...
@@ -1911,34 +2026,60 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container 74f1b954c9e4
- ---> af9741a15030
+Removing intermediate container 29fe15d4e122
+ ---> 6639512ef449
 Step 3/10 : RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar     && chmod +x wp-cli.phar     && mv wp-cli.phar /usr/local/bin/wp
- ---> Running in 560a0cdb878a
+ ---> Running in 167a0f07764b
 [91m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m 34 6808k   34 2335k    0     0  5839k      [0m[91m0  0:00:01 --:--:--  0:00:01 5839k[0m[91m100 6808k  100 6808k    0     0  8018k      0 --:--:-- -[0m[91m-:--:-- --:--:-- 8009k
-[0mRemoving intermediate container 560a0cdb878a
- ---> 7aff61e0c76e
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m 36 6[0m[91m808k   36 2495k    0     0  4586k      0  0:00:[0m[91m01 --:--:--  0:00:01 4578k[0m[91m100 6808k  100 6808k    0     0  6459k      0  0:00:01  0:00:01 --:--:-- 6459k
+[0mRemoving intermediate container 167a0f07764b
+ ---> 2fd1e37e6971
 Step 4/10 : COPY www.conf /etc/php/7.3/fpm/pool.d/www.conf
- ---> ac2b024f7de9
+ ---> bdef7cdbced1
 Step 5/10 : COPY config-amejia.42.fr.php /etc/wordpress/config-amejia.42.fr.php
- ---> ab5471969dc1
+ ---> dec88f3bac79
 Step 6/10 : COPY php.ini /etc/php/7.3/fpm/php.ini
- ---> d73d52bdba73
+ ---> 7da6c2eb8fd1
 Step 7/10 : COPY entrypoint.sh /usr/src/app/entrypoint.sh
- ---> ec9928fa7dd2
+ ---> 83f2340bd0db
 Step 8/10 : RUN chmod +x /usr/src/app/entrypoint.sh
- ---> Running in e0ab956959d9
-Removing intermediate container e0ab956959d9
- ---> 1e1b2d8bb056
+ ---> Running in ebd463f949db
+Removing intermediate container ebd463f949db
+ ---> 41c012493fcf
 Step 9/10 : EXPOSE 9000
- ---> Running in dd3b677e9d06
-Removing intermediate container dd3b677e9d06
- ---> 31ac59ef73fa
+ ---> Running in b23b05c8915d
+Removing intermediate container b23b05c8915d
+ ---> bd83febc21b1
 Step 10/10 : CMD ["/usr/src/app/entrypoint.sh"]
- ---> Running in ce9b974f1c75
-Removing intermediate container ce9b974f1c75
- ---> 1058d5545256
-Successfully built 1058d5545256
+ ---> Running in 51408dbecb82
+Removing intermediate container 51408dbecb82
+ ---> f3e9e80f0e89
+Successfully built f3e9e80f0e89
 Successfully tagged wordpress:latest
+docker-compose -f srcs/docker-compose.yml up 
+Attaching to mariadb, nginx, wordpress
+[36mmariadb      |[0m 231230 15:25:28 mysqld_safe Logging to syslog.
+[36mmariadb      |[0m 231230 15:25:28 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+[32mwordpress    |[0m + cd /usr/share/wordpress
+[32mwordpress    |[0m ++ wp core is-installed --allow-root
+[32mwordpress    |[0m Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or we can’t contact the database server at `mariadb`. This could mean your host’s database server is down.
+[32mwordpress    |[0m in
+[32mwordpress    |[0m + echo in
+[32mwordpress    |[0m + wp core install --url=amejia.42.fr '--title=A Blog about You' --admin_user=LeagueOfLegends --admin_password=Pokemon --admin_email=bruce@wayneenterprises.com --skip-email --allow-root
+[32mwordpress    |[0m Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or we can’t contact the database server at `mariadb`. This could mean your host’s database server is down.
+[32mwordpress    |[0m + wp option set comment_moderation 0 --allow-root
+[32mwordpress    |[0m Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or we can’t contact the database server at `mariadb`. This could mean your host’s database server is down.
+[32mwordpress    |[0m + wp option set comment_whitelist 0 --allow-root
+[32mwordpress    |[0m Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or we can’t contact the database server at `mariadb`. This could mean your host’s database server is down.
+[32mwordpress    |[0m ++ wp user get HalfLife --field=login --allow-root
+[32mwordpress    |[0m Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or we can’t contact the database server at `mariadb`. This could mean your host’s database server is down.
+[32mwordpress    |[0m + echo 'Creating new WordPress user: HalfLife'
+[32mwordpress    |[0m + wp user create HalfLife tony@starkindustries.com --user_pass=GrandTheftAuto --role=author --allow-root
+[32mwordpress    |[0m Creating new WordPress user: HalfLife
+[32mwordpress    |[0m Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or we can’t contact the database server at `mariadb`. This could mean your host’s database server is down.
+[32mwordpress    |[0m + exec php-fpm7.3 -F
+[32mwordpress exited with code 0
+[0m[33mnginx exited with code 0
+[0m[36mmariadb exited with code 137
+[0m
