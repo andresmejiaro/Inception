@@ -1,5 +1,5 @@
 
-FROM debian:buster
+FROM debian:stable-slim
 
 RUN apt-get update && apt-get install -y nginx curl && mkdir -p /etc/nginx/certs
 

@@ -24,4 +24,4 @@ if ! $(wp user get $NEW_WP_USER --field=login --allow-root); then
 fi
 
 # start PHP-FPM
-exec php-fpm7.3 -F
+exec php-fpm8.2 -F
